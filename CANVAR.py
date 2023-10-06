@@ -19,7 +19,6 @@ import os
 import sys
 import argparse
 import subprocess
-import requests
 import time
 import pkg_resources
  
@@ -33,20 +32,9 @@ CLINVAR_DATABASE_DIRECTORY = "ClinVar_database_files"
 #%% Define constants for package requirements
 REQUIRED_PACKAGES = {"regex", "numpy", "pandas", "alive-progress", "tabulate", "requests", "wget"}
     
-#%% Function to check internet access.
-def check_internet_connection():
-    try: 
-        resp = requests.get("https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/", timeout=5)
-        return True
-    except requests.ConnectionError:
-        return False
 
 #%% Function to install required packages
 def import_packages(args):
-    if check_internet_connection():
-        print("")
-    else:
-        print("Internet connection is required for packages and download_db to run")
     
     missing_packages = REQUIRED_PACKAGES - {pkg.key for pkg in pkg_resources.working_set}
     
@@ -73,11 +61,6 @@ def import_packages(args):
         print("Input not available")
         
                    
-    if check_internet_connection():
-        print("")
-    else:
-        print("Missing internet connection - \n Internet connection is required for installing packages and downloading database files.")
-         
 #%% Function to create and manage directories
 # Helper function to create or validate a directory
 def create_or_validate_directory(directory):
@@ -124,8 +107,18 @@ def clinvar_table_data(df):
     
     return df_
 
+#%% Function to check internet access.
+def check_internet_connection():
+    import requests
+    try: 
+        resp = requests.get("https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/", timeout=5)
+        return True
+    except requests.ConnectionError:
+        return False
+
 # Function to download files. 
 def download_db(args):
+    	
     if check_internet_connection():
         print("")
     else:
@@ -456,7 +449,7 @@ def annotate(args):
 
 # ROLLING!
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="CANVAR (Clinical ANotation Of VARiants)", epilog="Author: kraesing // Contact: lau.kraesing.vestergaard@regionh.dk // GitHub: https://github.com/kraesing // Molecular Unit, Department of Pathology, Herlev Hospital, University of Copenhagen, DK-2730 Herlev, Denmark." )
+    parser = argparse.ArgumentParser(description="========== CANVAR ==========", epilog="Author: kraesing // Contact: lau.kraesing.vestergaard@regionh.dk // GitHub: https://github.com/kraesing // Molecular Unit, Department of Pathology, Herlev Hospital, University of Copenhagen, DK-2730 Herlev, Denmark." )
     subparser = parser.add_subparsers(help="Info")
 
     parser_import_packages = subparser.add_parser("packages", help="Installation and importation of packages for CANVAR")
@@ -469,7 +462,7 @@ if __name__ == "__main__":
                                    help="Input the absolute path to where the working environment can be established. Example: [~/CANVAR.py prearrange -w H:/Path/to/dir]. After creating the working environment, change the directory to /ClinVar_dir.")
     parser_prearrange.set_defaults(func=prearrange)
 
-    parser_download_db = subparser.add_parser("download_db", help="Downloades files from ClinVar - https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh[37/38]/")
+    parser_download_db = subparser.add_parser("download_db", help="Download database file from ClinVar - https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh[37/38]/")
     parser_download_db.add_argument("-l", "--latest_file", metavar="", required=False,
                                     help="Download the latest database file from ClinVar. Example: [~/CANVAR.py download_db -l latest]")
     parser_download_db.add_argument("-a", "--archive_file", metavar="", required=False,
