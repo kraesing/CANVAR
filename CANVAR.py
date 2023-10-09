@@ -5,6 +5,17 @@
 # mail: lau.kraesing.vestergaard@regionh.dk 
 # GitHub: https://github.com/kraesing
 
+# overall impression is rather positive
+# I enjoy the fact that code is divided into chunks / functions
+# error handling is an issue from my perspective, but no much to do about if in python
+# periodic logging with print statements is a plus
+# consider setting up an option for verbosity
+# if you intend to publish this in an academic journal I believe this would be of interest
+# however, if you intend to release for production, meaning for the community to really use it
+# I suggest to invest more time on testing & indentifying potential shortcommings
+# there is nothing more annoying that software that does not work properly 
+# definetely substantial improvement from the previous version I saw
+# I would love to know your impressions & insights regarding this version
 # Importing libraries!
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning) 
@@ -31,7 +42,10 @@ REQUIRED_PACKAGES = {"regex", "numpy", "pandas", "alive-progress", "tabulate", "
 def import_packages(args):
     
     missing_packages = REQUIRED_PACKAGES - {pkg.key for pkg in pkg_resources.working_set}
-    
+
+    # not super familiar with pyhon & pip package manager
+    # but it feels like this could use an error catcher
+    # also, package versions?
     if args.import_packages == "Y":
         for package in missing_packages:
             print(f"installing... {package}")
@@ -64,7 +78,7 @@ def create_or_validate_directory(directory):
         print(f"Subdirectory: {directory} ...created")
     else:
         time.sleep(1)
-        print(f"Subdirectory: {directory} ...up to date")
+        print(f"Subdirectory: {directory} ...up-to-date")
 
 # Function to create directories        
 def prearrange(args):
@@ -86,6 +100,7 @@ def tab_print(clinvar_df, option):
 
 # Helper function to create tabled data
 def clinvar_table_data(df):
+    # better variable naming... probably
     import pandas as pd
     df_ = pd.DataFrame(df, columns=["file_name"])
     df_ = df_.loc[~df_["file_name"].str.contains("papu")]
@@ -104,6 +119,9 @@ def clinvar_table_data(df):
 #%% Function to check internet access.
 def check_internet_connection():
     import requests
+    # I would consider inputing the address as a variable
+    # I do understand that you would most likely not work with other website
+    # but still it would be more convenient for maintenace
     try: 
         resp = requests.get("https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/", timeout=5)
         return True
@@ -113,6 +131,10 @@ def check_internet_connection():
 # Function to download files. 
 def download_db(args):
     	
+    # this boolean seems backwards to me
+    # why not:
+    # if !check_internet_connectionnection():
+    # and get rid of the else
     if check_internet_connection():
         print("")
     else:
@@ -127,8 +149,12 @@ def download_db(args):
         
     l_file = args.latest_file
     
+    # I do not know whether python supports enums or something alike for type safety here
+    # otherwise, consider prechecking for odd values
     if l_file == "latest":
         which_assembly = input("Specify Genome Reference Consortium Human assembly [37/38]: ")
+        # again the ealier point of the hard-coded address
+        # also, would this work with either version?
         link = f"https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh{which_assembly}/"
         
         print("Searching for latest database file at link...")
@@ -154,6 +180,7 @@ def download_db(args):
 
             download = input("Download the latest file? [Y/N]: ")
 
+            # consider using boolean directly?
             if download.startswith("Y"):
                 chosen_file = clinvar_files_df.iloc[0]["Name"]
                 download_url = link + chosen_file
@@ -213,8 +240,11 @@ def download_db(args):
 #%% Function to create file for annotation of variants
 # Helper function to filter ClinVar variants
 def Clinvar_filtering(data_vcf, name):
+    # necessary import here, where they not all handled by function?
     import re
     import pandas as pd
+    # consider replacing strings with variables
+    # mainly for maintenace purposes
     # Clinical significance
     print("Task[1/8] - Creating column: Clinical_significance")
     data_vcf["Clinical_significance"] = data_vcf["INFO"].apply(lambda x: re.findall(r"(?<=CLNSIG).*?(?=;)", x)).astype("str")
@@ -402,6 +432,8 @@ def annotate(args):
         print(f"Annotating file: {a}")
         nlines = check_and_skip(a)
 
+        # could you replace each of these blocks with a function?
+        # because they seem repetive
         if a.endswith(".tsv"):
             an_file = pd.read_csv(a, sep=("\t"), skiprows=nlines)
             with alive_bar(an_file.shape[0]) as bar:
@@ -441,6 +473,7 @@ def annotate(args):
     for move_file in files_to_move:
         move_files(os.path.basename(move_file))
 
+# AWESOME!
 # ROLLING!
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="========== CANVAR ==========", epilog="Author: kraesing // Contact: lau.kraesing.vestergaard@regionh.dk // GitHub: https://github.com/kraesing // Molecular Unit, Department of Pathology, Herlev Hospital, University of Copenhagen, DK-2730 Herlev, Denmark." )
