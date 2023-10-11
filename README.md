@@ -50,10 +50,10 @@ ___________________________________________________
 The general use is simplified by the following:
 
 ```bash
-~/CANVAR_dir/python CANVAR.py "function" -option  
+~/CANVAR_dir/python CANVAR.py "function" --option  
 ```
 
-Help can be accessed via -h or --help for all function.
+Help can be accessed via -h or --help for all functions.
 ```bash
 ~/CANVAR_dir/python CANVAR.py --help
 ```
@@ -76,11 +76,11 @@ ___________________________________________________
 The "prearrange" function establishes an environment that encompasses the parent directory and subdirectories for CANVAR. 
 
 Directories created:
-- ~/ClinVar_dir
-- ~/ClinVar_dir/archive 
-- ~/ClinVar_dir/ClinVar_database_files 
-- ~/ClinVar_dir/input_files
-- ~/ClinVar_dir/output_files_annotated 
+- ~/canvar_dir
+- ~/canvar_dir/archive 
+- ~/canvar_dir/ClinVar_database_files 
+- ~/canvar_dir/input_files
+- ~/canvar_dir/output_files_annotated 
 
 ```bash
 ~/CANVAR_dir/python CANVAR.py prearrange --wrkdir .
