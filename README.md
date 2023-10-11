@@ -30,12 +30,14 @@ conda activate canvar
 ___________________________________________________
 ### Create directory for the CANVAR.py file and place it (optional)
 - if the CANVAR.py file is placed elsewhere - the absolut path must be provided in the step "Running CANVAR.py".
+
 ```bash
 mkdir ~/CANVAR_dir
 ``` 
  
 ___________________________________________________
 ### Change directory to CANVAR_dir
+
 ```bash
 cd ~/CANVAR_dir
 ```
@@ -58,4 +60,22 @@ Help can be accessed via -h or --help for all function.
 ```  
 
 ___________________________________________________
-### FUNCTION: CANVAR.py packages
+### CANVAR.py packages
+
+The "packages" function serves to install and import the essential packages required for the proper functioning of CANVAR.
+Internet connection is required for the installation of packages. 
+
+```bash
+~/CANVAR_dir/python CANVAR.py packages --import_packages Y
+```
+
+
+
+
+
+
+
+
+
+
+
