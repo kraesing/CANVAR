@@ -86,10 +86,10 @@ Directories created:
 ~/CANVAR_dir/python CANVAR.py prearrange --wrkdir .
 ```
 
-and subsequently change directory to ~/ClinVar_dir
+and subsequently change directory to ~/canvar_dir
 
 ```bash
-cd ClinVar_dir
+cd canvar_dir
 ```
 
 ___________________________________________________
