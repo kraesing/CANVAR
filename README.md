@@ -76,20 +76,20 @@ ___________________________________________________
 The "prearrange" function establishes an environment that encompasses the parent directory and subdirectories for CANVAR. 
 
 Directories created:
-- ~/canvar_dir
-- ~/canvar_dir/archive 
-- ~/canvar_dir/ClinVar_database_files 
-- ~/canvar_dir/input_files
-- ~/canvar_dir/output_files_annotated 
+- ~/canvar
+- ~/canvar/archive 
+- ~/canvar/clinvar_database_files 
+- ~/canvar/input_files
+- ~/canvar/output_files_annotated 
 
 ```bash
 ~/CANVAR_dir/python CANVAR.py prearrange --wrkdir .
 ```
 
-and subsequently change directory to ~/canvar_dir
+and subsequently change directory to ~/canvar
 
 ```bash
-cd canvar_dir
+cd canvar
 ```
 
 ___________________________________________________
