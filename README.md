@@ -8,10 +8,10 @@ follow the tutorial on: https://docs.anaconda.com/free/anaconda/install/windows/
 
 ## Creating a windows environment for ClinVar
 
-open Anaconda Prompt (Miniconda3)
+In Anaconda Prompt (Miniconda3) type:
 
 ```bash
 conda create -n test_1 python=3.9.12 m2-base=1.0.0
 ```
 
-m2-base enables the use of UNIX commands. 
+- The m2-base package enables the use of UNIX commands. 
