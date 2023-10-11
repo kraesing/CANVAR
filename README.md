@@ -9,7 +9,7 @@ This script provides comprehensive data from the most up-to-date ClinVar databas
 
 follow the tutorial on: https://docs.anaconda.com/free/anaconda/install/windows/
 
-___________________________________________________
+#___________________________________________________
 ### Creating a windows environment for ClinVar
 
 In Anaconda Prompt (Miniconda3) type:
@@ -55,3 +55,5 @@ Help can be accessed via -h or --help for all function.
 ```bash
 ~/CANVAR_dir/python CANVAR.py "function" --help
 ```  
+
+___________________________________________________
