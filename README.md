@@ -1,6 +1,7 @@
 #               Project CANVAR 
 
 ## A Tool for Clinical Annotation of Variants using ClinVar databases. 
+- doi:
 
 Purpose: An efficient Python script designed for annotating variants detected through next-generation sequencing within a clinical setting. 
 This script provides comprehensive data from the most up-to-date ClinVar database, simplifying the process of variant analysis and aiding in clinical decision-making.
