@@ -2,7 +2,7 @@
 
 A Tool for Clinical Annotation of Variants using ClinVar databases. 
 
-## Installation of Anaconda for the use of ClinVar on Windows (win-32/win-64)
+## *Installation of Anaconda for the use of ClinVar on Windows (win-32/win-64)
 
 follow the tutorial on: https://docs.anaconda.com/free/anaconda/install/windows/
 
