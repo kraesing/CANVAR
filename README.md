@@ -21,6 +21,6 @@ conda create -n canvar python=3.9.12 m2-base=1.0.0
 
 ### Activate the environment
 
-´´´bash
+```bash
 conda activate canvar
-´´´  
+```  
