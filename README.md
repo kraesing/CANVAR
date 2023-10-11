@@ -114,6 +114,12 @@ For older versions of ClinVar database files (example 2021)
 
 
 
+___________________________________________________
+### License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+
 
 
 
