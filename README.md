@@ -90,7 +90,10 @@ and subsequently change directory to ~/ClinVar_dir
 cd ClinVar_dir
 ```
 
+___________________________________________________
+### CANVAR.py download_db
 
+'\e[3mdownload_db\e[23m'
 
 
 
