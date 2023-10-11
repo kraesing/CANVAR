@@ -2,8 +2,8 @@
 
 ## A Tool for Clinical Annotation of Variants using ClinVar databases. 
 
-Purpose: "An efficient Python script designed for annotating variants detected through next-generation sequencing within a clinical setting. 
-This script provides comprehensive data from the most up-to-date ClinVar database, simplifying the process of variant analysis and aiding in clinical decision-making."
+Purpose: An efficient Python script designed for annotating variants detected through next-generation sequencing within a clinical setting. 
+This script provides comprehensive data from the most up-to-date ClinVar database, simplifying the process of variant analysis and aiding in clinical decision-making.
 
 ### Installation of Anaconda for the use of ClinVar on Windows (win-32/win-64)
 
