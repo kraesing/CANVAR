@@ -69,8 +69,20 @@ NOTE: Internet connection is required for the installation of packages.
 ~/CANVAR_dir/python CANVAR.py packages --import_packages Y
 ```
 
+___________________________________________________
+### CANVAR.py prearrange
+The "prearrange" function establishes an environment that encompasses the parent directory and subdirectories for CANVAR. 
 
+Directories created:
+- ~/ClinVar_dir
+- ~/ClinVar_dir/archive 
+- ~/ClinVar_dir/ClinVar_database_files 
+- ~/ClinVar_dir/input_files
+- ~/ClinVar_dir/output_files_annotated 
 
+```bash
+~/CANVAR_dir/python CANVAR.py prearrange --wrkdir .
+```
 
 
 
