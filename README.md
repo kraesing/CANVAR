@@ -58,3 +58,4 @@ Help can be accessed via -h or --help for all function.
 ```  
 
 ___________________________________________________
+### FUNCTION: CANVAR.py packages
