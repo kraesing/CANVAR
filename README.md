@@ -95,6 +95,13 @@ cd canvar
 ___________________________________________________
 ### CANVAR.py download_db
 
+The "download_db" function establishes a connection to ClinVar's File Transfer Protocol (FTP).
+This is allowing you to download the most recent version of the database or an older version. 
+
+FTP's: 
+- GRCh37: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/
+- GRCh38: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/
+
 
 
 
