@@ -23,4 +23,9 @@ conda create -n canvar python=3.9.12 m2-base=1.0.0
 
 ```bash
 conda activate canvar
+```
+
+### Create directory for the CANVAR.py file and place it (optional)
+```bash
+mkdir CANVAR_dir
 ```  
