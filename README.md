@@ -63,7 +63,7 @@ ___________________________________________________
 ### CANVAR.py packages
 
 The "packages" function serves to install and import the essential packages required for the proper functioning of CANVAR.
-Internet connection is required for the installation of packages. 
+NOTE: Internet connection is required for the installation of packages. 
 
 ```bash
 ~/CANVAR_dir/python CANVAR.py packages --import_packages Y
