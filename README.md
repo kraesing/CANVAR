@@ -14,9 +14,13 @@ follow the tutorial on: https://docs.anaconda.com/free/anaconda/install/windows/
 In Anaconda Prompt (Miniconda3) type:
 
 ```bash
-conda create -n test_1 python=3.9.12 m2-base=1.0.0
+conda create -n canvar python=3.9.12 m2-base=1.0.0
 ```
 
 - The m2-base package enables the use of UNIX commands. 
 
-### 
+### Activate the environment
+
+´´´bash
+conda activate canvar
+´´´  
