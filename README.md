@@ -46,8 +46,7 @@ The general use is simplified by the following:
 Help can be accessed via -h or --help for all function.
 ```bash
 ~/CANVAR_dir/python CANVAR.py --help
-
-or
-
+```
+```bash
 ~/CANVAR_dir/python CANVAR.py "function" --help
 ```  
