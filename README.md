@@ -42,3 +42,12 @@ The general use is simplified by the following:
 ```bash
 ~/CANVAR_dir/python CANVAR.py "function" -option  
 ```
+
+Help can be accessed via -h or --help for all function.
+```bash
+~/CANVAR_dir/python CANVAR.py --help
+
+or
+
+~/CANVAR_dir/python CANVAR.py "function" --help
+```  
