@@ -9,6 +9,7 @@ This script provides comprehensive data from the most up-to-date ClinVar databas
 
 follow the tutorial on: https://docs.anaconda.com/free/anaconda/install/windows/
 
+___________________________________________________
 ### Creating a windows environment for ClinVar
 
 In Anaconda Prompt (Miniconda3) type:
