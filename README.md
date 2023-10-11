@@ -20,22 +20,26 @@ conda create -n canvar python=3.9.12 m2-base=1.0.0
 
 - The m2-base package enables the usage of UNIX commands. 
 
+___________________________________________________
 ### Activate the environment
 
 ```bash
 conda activate canvar
 ```
 
+___________________________________________________
 ### Create directory for the CANVAR.py file and place it (optional)
 ```bash
 mkdir ~/CANVAR_dir
-```  
-
+``` 
+ 
+___________________________________________________
 ### Change directory to CANVAR_dir
 ```bash
 cd ~/CANVAR_dir
 ```
 
+___________________________________________________
 ### Running CANVAR.py
 
 The general use is simplified by the following:
