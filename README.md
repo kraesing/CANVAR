@@ -6,10 +6,12 @@ A Tool for Clinical Annotation of Variants using ClinVar databases.
 
 follow the tutorial on: https://docs.anaconda.com/free/anaconda/install/windows/
 
-## Creating an environment for ClinVar to run in
+## Creating a windows environment for ClinVar
 
 open Anaconda Prompt (Miniconda3)
 
 ```bash
 conda create -n test_1 python=3.9.12 m2-base=1.0.0
 ```
+
+m2-base enables the use of UNIX commands. 
