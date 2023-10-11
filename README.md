@@ -17,7 +17,7 @@ In Anaconda Prompt (Miniconda3) type:
 conda create -n canvar python=3.9.12 m2-base=1.0.0
 ```
 
-- The m2-base package enables the use of UNIX commands. 
+- The m2-base package enables the usage of UNIX commands. 
 
 ### Activate the environment
 
@@ -33,4 +33,12 @@ mkdir ~/CANVAR_dir
 ### Change directory to CANVAR_dir
 ```bash
 cd ~/CANVAR_dir
+```
+
+### Running CANVAR.py
+
+The general use is simplified by the following:
+
+```bash
+~/CANVAR_dir/python CANVAR.py "function" -option  
 ```
