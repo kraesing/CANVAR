@@ -102,6 +102,16 @@ FTP's:
 - GRCh37: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/
 - GRCh38: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/
 
+For the latest up-to-date database file
+```bash
+~/canvar/python ../CANVAR.py download_db --latest_file latest 
+```
+
+For older versions of database files (example 2021)
+```bash
+~/canvar/python ../CANVAR.py download_db --archive_file 2021  
+```
+
 
 
 
