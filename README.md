@@ -27,5 +27,10 @@ conda activate canvar
 
 ### Create directory for the CANVAR.py file and place it (optional)
 ```bash
-mkdir CANVAR_dir
+mkdir ~/CANVAR_dir
 ```  
+
+### Change directory to CANVAR_dir
+```bash
+cd ~/CANVAR_dir
+```
