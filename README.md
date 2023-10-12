@@ -170,7 +170,7 @@ Following the annotation process, the input file will have additional columns ap
 
 In cases where a variant is not found in the ClinVar database, it is marked with "Manually inspection needed" in the "Clinical_significance" column.
 
-Once annotation is complete, the original files are relocated to the ```bash ~/canvar/archive``` directory, and the annotated files with a ".ann" extension are transferred to the ~/canvar/output_files_annotated directory.
+Once annotation is complete, the original files are relocated to the ```~/canvar/archive``` directory, and the annotated files with a ".ann" extension are transferred to the ~/canvar/output_files_annotated directory.
 
 ___________________________________________________
 ### License
