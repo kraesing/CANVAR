@@ -112,7 +112,19 @@ For older versions of ClinVar database files (example 2021)
 ~/canvar/python ../CANVAR.py download_db --archive_file 2021  
 ```
 
+___________________________________________________
+### CANVAR.py check_construct
 
+The "check_construct" function utilizes the ClinVar's downloaded database file to create the required file for annotating variants. 
+After this process is completed, the annotation file comprises the following details: 
+- Location
+- Nucleotide change 
+- Gene symbol
+- Clinical significance
+- Reference SNP cluster ID (RS id)
+- Mutation type
+- ClinVar review status 
+- ClinVar disease name
 
 ___________________________________________________
 ### License
