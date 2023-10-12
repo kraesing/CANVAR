@@ -156,6 +156,22 @@ It's important to note that the user input files must include variables denoting
 - Observed Allele
 
 NOTE: To perform annotation, files intended for annotation must be placed in the "~/canvar/input_files" directory.
+
+___________________________________________________
+
+Following the annotation process, the input file will have additional columns appended, including: 
+- Identifier
+- Gene_symbol
+- Clinical_significance
+- RS_id
+- Mutation_type
+- ClinVar_review_status
+- ClinVar_disease_name 
+
+In cases where a variant is not found in the ClinVar database, it is marked with "Manually inspection needed" in the "Clinical_significance" column.
+
+Once annotation is complete, the original files are relocated to the "~/canvar/archive" directory, and the annotated files with a ".ann" extension are transferred to the "~/canvar/output_files_annotated" directory.
+
 ___________________________________________________
 ### License
 [MIT](https://choosealicense.com/licenses/mit/)
