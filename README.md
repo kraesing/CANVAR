@@ -45,7 +45,7 @@ cd ~/CANVAR_dir
 ```
 
 ___________________________________________________
-### Running CANVAR.py
+### Running CANVAR.py -h, --help
 
 The general use is simplified by the following:
 
@@ -62,7 +62,7 @@ Help can be accessed via -h or --help for all functions.
 ```  
 
 ___________________________________________________
-### CANVAR.py packages
+### CANVAR.py packages -i, --import_packages
 
 The "packages" function serves to install and import the essential packages required for the proper functioning of CANVAR.
 NOTE: Internet connection is required for the installation of packages. 
@@ -72,7 +72,7 @@ NOTE: Internet connection is required for the installation of packages.
 ```
 
 ___________________________________________________
-### CANVAR.py prearrange
+### CANVAR.py prearrange -w, --wrkdir
 The "prearrange" function establishes an environment that encompasses the parent directory and subdirectories for CANVAR. 
 
 Directories created:
@@ -93,7 +93,7 @@ cd canvar
 ```
 
 ___________________________________________________
-### CANVAR.py download_db
+### CANVAR.py download_db -l, --latest_file / -a, --archive_file
 
 The "download_db" function establishes a connection to ClinVar's File Transfer Protocol (FTP).
 This is allowing you to download the most recent version of the database or an older version. 
@@ -107,13 +107,13 @@ For the latest up-to-date ClinVar database file
 ~/canvar/python ../CANVAR.py download_db --latest_file latest 
 ```
 
-For older versions of ClinVar database files (example 2021)
+For older versions of ClinVar database files (example: 2021)
 ```bash
 ~/canvar/python ../CANVAR.py download_db --archive_file 2021  
 ```
 
 ___________________________________________________
-### CANVAR.py check_construct
+### CANVAR.py check_construct -d, --database_file
 
 The "check_construct" function utilizes the ClinVar's downloaded database file to create the required file for annotating variants. 
 After this process is completed, the annotation file comprises the following details: 
@@ -125,6 +125,17 @@ After this process is completed, the annotation file comprises the following det
 - Mutation type
 - ClinVar review status 
 - ClinVar disease name
+
+Creating the annotation file from .gz format (example: ClinVar database file from 20230617).
+```bash
+~/canvar/python ../CANVAR.py check_construct --database_file clinvar_20230617.vcf.gz
+```
+
+Creating the annotation file from .vcf (unpacked) format (example: ClinVar database file from 20230617).
+```bash
+~/canvar/python ../CANVAR.py check_construct --database_file clinvar_20230617.vcf
+```
+
 
 ___________________________________________________
 ### License
