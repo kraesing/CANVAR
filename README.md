@@ -114,7 +114,7 @@ For older versions of ClinVar database files (example: 2021)
 
 ___________________________________________________
 ### CANVAR.py check_construct 
-### Options: -d, --database_file
+- Options: -d, --database_file
 
 The "check_construct" function utilizes the ClinVar's downloaded database file to create the required file for annotating variants. 
 After this process is completed, the annotation file comprises the following details: 
