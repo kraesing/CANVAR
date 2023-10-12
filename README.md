@@ -45,7 +45,8 @@ cd ~/CANVAR_dir
 ```
 
 ___________________________________________________
-### Running CANVAR.py -h, --help
+### Running CANVAR.py 
+Options: -h, --help
 
 The general use is simplified by the following:
 
@@ -62,7 +63,8 @@ Help can be accessed via -h or --help for all functions.
 ```  
 
 ___________________________________________________
-### CANVAR.py packages -i, --import_packages
+### CANVAR.py packages 
+Options: -i, --import_packages
 
 The "packages" function serves to install and import the essential packages required for the proper functioning of CANVAR.
 NOTE: Internet connection is required for the installation of packages. 
@@ -72,7 +74,8 @@ NOTE: Internet connection is required for the installation of packages.
 ```
 
 ___________________________________________________
-### CANVAR.py prearrange -w, --wrkdir
+### CANVAR.py prearrange 
+Options: -w, --wrkdir
 The "prearrange" function establishes an environment that encompasses the parent directory and subdirectories for CANVAR. 
 
 Directories created:
@@ -93,7 +96,8 @@ cd canvar
 ```
 
 ___________________________________________________
-### CANVAR.py download_db -l, --latest_file / -a, --archive_file
+### CANVAR.py download_db 
+Options: -l, --latest_file / -a, --archive_file
 
 The "download_db" function establishes a connection to ClinVar's File Transfer Protocol (FTP).
 This is allowing you to download the most recent version of the database or an older version. 
