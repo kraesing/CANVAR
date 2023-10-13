@@ -24,6 +24,7 @@ CLINVAR_DATABASE_DIRECTORY = "clinvar_database_files"
 LINK_INTERNET = "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/" 
 ASSEMBLY = "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh"
 ARCHIVE_VER = "archive_2.0/"
+
 #%% Define constants for package requirements
 REQUIRED_PACKAGES = {"regex == 2022.3.15", 
                      "numpy == 1.24.4", 
