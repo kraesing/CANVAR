@@ -43,20 +43,6 @@ def import_packages(args):
         for package in missing_packages:
             print(f"installing... {package}")
             subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-    # Importing required packages.
-        #import os
-        #import time 
-        #import glob
-        #import gzip
-        #import shutil
-        #import io
-        #import numpy as np
-        #import pandas as pd
-        #import re
-        #from alive_progress import alive_bar
-        #from tabulate import tabulate
-        #import requests
         
         print("Needed packages have been imported")
     else:
