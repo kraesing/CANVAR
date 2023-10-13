@@ -157,6 +157,10 @@ It's important to note that the user input files must include variables denoting
 
 NOTE: To perform annotation, files intended for annotation must be placed in the ```~/canvar/input_files``` directory.
 
+```bash
+~/canvar/python ../CANVAR.py annotate --annotation_file clinvar_20230617.tsv
+```
+
 ___________________________________________________
 
 Following the annotation process, the input file will have additional columns appended, including: 
