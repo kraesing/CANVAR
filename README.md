@@ -162,6 +162,7 @@ NOTE: To perform annotation, files intended for annotation must be placed in the
 ```
 
 ___________________________________________________
+### Following annotation
 
 Following the annotation process, the input file will have additional columns appended, including: 
 - Identifier
