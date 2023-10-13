@@ -138,8 +138,6 @@ Creating the annotation file from .gz format (example: ClinVar database file fro
 ```
 
 Creating the annotation file from .vcf (unpacked) format (example: ClinVar database file from 20230617).
-
-command
 ```bash
 ~/canvar/python ../CANVAR.py check_construct --database_file clinvar_20230617.vcf
 ```
