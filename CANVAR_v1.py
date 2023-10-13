@@ -47,8 +47,7 @@ def import_packages(args):
         print("Needed packages have been imported")
     else:
         print("Input not available")
-        
-                   
+                           
 #%% Function to create and manage directories
 # Helper function to create or validate a directory
 def create_or_validate_directory(directory):
@@ -366,7 +365,6 @@ def move_files(file):
             print("Permission denied.")
         except:
             print("Error occurred while moving the file.")
-
 
 # Helper function for progress
 def alive_bar_(ann_file):
