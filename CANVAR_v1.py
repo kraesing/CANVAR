@@ -420,8 +420,6 @@ def annotate(args):
     
     annotation_df = pd.read_csv(annotation_f, sep="\t")
     
-    annotation_df = pd.read_csv(r"clinvar_20231007.tsv", sep="\t")
-    
     for f in annotation_df.Identifier.iloc[[-1]]:
       if f != "0:000000:Valid:File":
           print("Invalid annotation file encountered!")
@@ -467,7 +465,7 @@ if __name__ == "__main__":
     parser_download_db.add_argument("-l", "--latest_file", metavar="", required=False,
                                     help="Download the latest database file from ClinVar. Example: [~/CANVAR.py download_db -l latest]")
     parser_download_db.add_argument("-a", "--archive_file", metavar="", required=False,
-                                    help="Input the year of which to search the ClinVar database with and choose a specific file to download. Example: [~/CANVAR.py download_db -a 2023]")
+                                    help="Input the year of which to search the ClinVar database with and choose a specific file to download. Example: [~/CANVAR.py download_db -a 2021]")
     parser_download_db.set_defaults(func=download_db)
 
     parser_check_construct = subparser.add_parser("check_construct", help="Creates an annotation file with the right format needed as input for 'CANVAR.py annotate'")
