@@ -6,7 +6,7 @@
 # mail: lau.kraesing.vestergaard@regionh.dk 
 # GitHub: https://github.com/kraesing
 
-# version: 1.0.0
+# version: 1.0.0 
 
 # Importing libraries!
 import warnings
