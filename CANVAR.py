@@ -24,6 +24,8 @@ ARCHIVE_DIRECTORY = "archive"
 INPUT_FILES_DIRECTORY = "input_files"
 OUTPUT_ANNOTATED_DIRECTORY = "output_files_annotated"
 CLINVAR_DATABASE_DIRECTORY = "clinvar_database_files"
+
+#%% Define variables for links 
 LINK_INTERNET = "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/" 
 ASSEMBLY = "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh"
 ARCHIVE_VER = "archive_2.0/"
