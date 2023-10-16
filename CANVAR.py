@@ -451,7 +451,7 @@ def annotate(args):
 
 # ROLLING!
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="========== CANVAR ==========", epilog="Author: kraesing // Contact: lau.kraesing.vestergaard@regionh.dk // GitHub: https://github.com/kraesing // Molecular Unit, Department of Pathology, Herlev Hospital, University of Copenhagen, DK-2730 Herlev, Denmark." )
+    parser = argparse.ArgumentParser(description="========== CANVAR ==========", epilog="Author: kraesing // Contact: lau.kraesing.vestergaard@regionh.dk // GitHub: https://github.com/kraesing // Molecular Unit, Department of Pathology, Herlev Hospital, University of Copenhagen, DK-2730 Herlev, Denmark // License terms: MIT" )
     subparser = parser.add_subparsers(help="Info")
 
     parser_import_packages = subparser.add_parser("packages", help="Installation and importation of packages for CANVAR")
